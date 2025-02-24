@@ -4,8 +4,9 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report, precision_score, recall_score
 from typing import Dict
+import matplotlib.pyplot as plt  # Importar biblioteca para gráficos
 
-def main() -> None:
+def main() -> str:
     """
     Função principal para carregar dados, pré-processar, treinar um modelo de classificação
     e avaliar seu desempenho.
@@ -44,6 +45,8 @@ def main() -> None:
     print('Media entre Acurácia, Precisão e Recall:', (accuracy + precision + recall) / 3)
     print('Classification Report:')
     print(report)  # Imprime o relatório de classificação
+        
+    return report  # Retorna o relatório de classificação
 
 if __name__ == "__main__":
     main()  # Executa a função principal
